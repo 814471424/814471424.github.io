@@ -1,0 +1,30 @@
+[package]
+name = "blog_app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = {version="0.20", features = ["csr"]} 
+yew-router = "0.17"
+yew-hooks = "0.2.0"
+web-sys = {version="0.3", features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]} 
+log = "0.4.6"
+wasm-logger = "0.2"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4.33"
+# gloo-net = "0.2.4"
+gloo = "0.8"
+reqwest = { version = "0.11", features = ["json"] }
+
+thiserror = "1"
+serde = "1"
+lazy_static = "1.4"
+chrono = "0.4"
