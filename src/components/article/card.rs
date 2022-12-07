@@ -1,4 +1,7 @@
 use yew::{html, Component, Html};
+use yew_router::prelude::Link;
+
+use crate::route::Route;
 
 pub struct ArticleCard;
 
@@ -21,9 +24,10 @@ impl Component for ArticleCard {
                             <i class="label-arrow"></i>
                         </a>
                         <h2 class="kratos-entry-title-new">
-                            <a href="https://demo.typecho.me/typecho/Kratos/blog/10.html">
-                                {"Typecho 演示说明"}
-                            </a>
+                            // <a href="https://demo.typecho.me/typecho/Kratos/blog/10.html">
+                            //     {"Typecho 演示说明"}
+                            // </a>
+                            <Link<Route> to={Route::Post{id: String::from("1")}}>{ "Typecho 演示说明" }</Link<Route>>
                         </h2>
                     </header>
                     <div class="kratos-entry-content-new">

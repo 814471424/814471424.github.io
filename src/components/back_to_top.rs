@@ -43,7 +43,7 @@ impl Component for BackToTop {
         window.set_onscroll(scroll.as_ref().dyn_ref());
         scroll.forget();
 
-        let image_vec = vec!["./reimu.png", "./marisa.png", "./flandre.png"];
+        let image_vec = vec!["/reimu.png", "/marisa.png", "/flandre.png"];
         let index = (chrono::Local::now().timestamp() % 3) as usize;
         let image = image_vec[index];
 

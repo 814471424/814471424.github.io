@@ -1,4 +1,4 @@
-use yew::{html, Component, Html};
+use yew::{html, AttrValue, Component, Html};
 
 pub struct ArticleDetail;
 
@@ -12,6 +12,37 @@ impl Component for ArticleDetail {
     }
 
     fn view(&self, ctx: &yew::Context<Self>) -> Html {
+        let content = "<p>This is the initial content of the editor.</p>
+        <p>&nbsp;</p>
+        <table style=\"border-collapse: collapse; width: 100.06%;\" border=\"1\"><colgroup><col style=\"width: 16.5922%;\"><col style=\"width: 16.5922%;\"><col style=\"width: 16.5922%;\"><col style=\"width: 16.5922%;\"><col style=\"width: 16.5922%;\"><col style=\"width: 16.7417%;\"></colgroup>
+        <tbody>
+        <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td colspan=\"2\">1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+        </tbody>
+        </table>";
+        let inner = Html::from_html_unchecked(AttrValue::from(content));
+
         html! {
             <article>
                 <div class="kratos-post-inner">
@@ -29,7 +60,9 @@ impl Component for ArticleDetail {
                         <p>{"注：本站为typecho演示说明，仅供参考使用。"}</p>
                         <p>{"相关模板下载请移戚：https://typecho.me 或 https://pro.typecho.me/"}</p>
                         <p>{"谢谢。"}</p>
-                    </div>
+                        <p style="text-align: center;" data-mce-style="text-align: center;"><strong>{"daaaaaaaaa"}</strong></p>
+                        <div>{inner}</div>
+                        </div>
                     <footer class="kratos-entry-footer">
                         <div class="footer-tag text-center">
                             <div class="pull-left">
