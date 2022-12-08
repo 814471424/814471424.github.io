@@ -190,7 +190,7 @@ impl Component for Header {
                                                 let path1 = i1.path.clone();
                                                 html!{
                                                     <li>
-                                                        <a href="#" class="nav-link" onclick={ctx.link().callback(move|_| {HeaderMsg::Jump(String::from(&path1))})}>{&i1.title}
+                                                        <a class="nav-link" onclick={ctx.link().callback(move|_| {HeaderMsg::Jump(String::from(&path1))})}>{&i1.title}
                                                         </a>
                                                     </li>
                                                 }
@@ -201,7 +201,7 @@ impl Component for Header {
                                 } else {
                                     html!{
                                         <li class="nav-item-ex">
-                                            <a href="#" class="nav-link" onclick={ctx.link().callback(move|_| {HeaderMsg::Jump(String::from(&path))})}>{&i.title}</a>
+                                            <a class="nav-link" onclick={ctx.link().callback(move|_| {HeaderMsg::Jump(String::from(&path))})}>{&i.title}</a>
                                         </li>
                                     }
                                 }
@@ -231,7 +231,7 @@ impl Component for Header {
             HeaderMsg::Jump(url) => {
                 self.show = false;
 
-                gloo::history::BrowserHistory::new().push(url);
+                gloo::history::HashHistory::new().push(url);
                 // let history = ctx.link().history().expect_throw("failed to read history");
                 // history.push(AnyRoute::new(url));
 

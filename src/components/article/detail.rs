@@ -66,14 +66,14 @@ impl Component for ArticleDetail {
                     <footer class="kratos-entry-footer">
                         <div class="footer-tag text-center">
                             <div class="pull-left">
-                                <a href="#">{"typecho"}</a>
+                                <a>{"typecho"}</a>
                             </div>
                         </div>
                     </footer>
                 </div>
                 <nav class="post-navigation">
-                    <div class="nav-previous nav-data"><a href="#">{"无上一篇文章"}</a></div>
-                    <div class="nav-next nav-data"><a href="#">{"下一篇"}</a></div>
+                    <div class="nav-previous nav-data"><a>{"无上一篇文章"}</a></div>
+                    <div class="nav-next nav-data"><a>{"下一篇"}</a></div>
                 </nav>
                 <div class="comments-area">
                     <ol class="comment-list"></ol>

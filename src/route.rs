@@ -26,6 +26,10 @@ pub enum Route {
 pub fn switch(routes: Route) -> Html {
     let window = web_sys::window().expect("no global `window` exists");
     let document = window.document().expect("no document here");
+    let element = document
+        .document_element()
+        .expect("should have a element on document");
+    element.set_scroll_top(0);
 
     match routes.clone() {
         Route::Post { id } => {

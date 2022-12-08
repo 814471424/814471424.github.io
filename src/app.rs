@@ -1,5 +1,5 @@
 use yew::{html, Component, Context, Html};
-use yew_router::BrowserRouter;
+use yew_router::HashRouter;
 use yew_router::Switch;
 // use yew_transition_group::{Timeout, Transition};
 
@@ -17,7 +17,7 @@ impl Component for App {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <BrowserRouter>
+            <HashRouter>
                 <div class="wrapper">
                     // 头部
                     <Header />
@@ -30,7 +30,7 @@ impl Component for App {
                 <FooterTwo />
                 // 其他组件(返回顶部)
                 <BackToTop />
-            </BrowserRouter>
+            </HashRouter>
         }
     }
 

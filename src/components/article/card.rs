@@ -38,23 +38,23 @@ impl Component for ArticleCard {
                 </div>
                 <div class="kratos-post-meta-new">
                     <span class="pull-left d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
-                        <a href="#">
+                        <a>
                             <i class="bi bi-calendar3"></i>
                             {" 2028/04/04"}
                         </a>
-                        <a href="#">
+                        <a>
                             <i class="bi bi-chat-dots"></i>
                             {" 3 Comments"}
                         </a>
                     </span>
                     <span class="pull-left">
-                        <a href="#">
+                        <a>
                             <i class="bi bi-eye"></i>
                             {" 2549 Views"}
                         </a>
                     </span>
                     <span class="pull-right">
-                        <a href="#">
+                        <a>
                             {"阅读全文 "}
                             <i class="bi bi-arrow-right-circle-fill"></i>
                         </a>
